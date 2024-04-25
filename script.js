@@ -25,7 +25,7 @@ let duration = document.getElementById('duration-num')
 let classification = document.getElementById('film-classification')
 let plot = document.getElementById('plot')
 
-function search() {
+async function search() {
     clear()
     let movieName = input.value
     let url = ` http://www.omdbapi.com/?t=${movieName}&apikey=cb603c75` // API url
@@ -35,7 +35,7 @@ function search() {
         console.log('Enter the name')
     }
     else {
-        fetch(url).then((resp) => resp.json()).then((data) => {
+        await fetch(url).then((resp) => resp.json()).then((data) => {
             if (data.Response == "True") {
                 img.src = data.Poster
                 title.innerHTML = data.Title
