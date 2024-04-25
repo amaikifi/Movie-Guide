@@ -25,17 +25,17 @@ let duration = document.getElementById('duration-num')
 let classification = document.getElementById('film-classification')
 let plot = document.getElementById('plot')
 
-async function search() {
+function search() {
     clear()
     let movieName = input.value
-    let url = ` http://www.omdbapi.com/?t=${movieName}&apikey=cb603c75` // API url
+    let url = ` https://www.omdbapi.com/?t=${movieName}&apikey=cb603c75` // API url
 
     if(movieName.length <= 0) {
         
         console.log('Enter the name')
     }
     else {
-        await fetch(url).then((resp) => resp.json()).then((data) => {
+        fetch(url).then((resp) => resp.json()).then((data) => {
             if (data.Response == "True") {
                 img.src = data.Poster
                 title.innerHTML = data.Title
