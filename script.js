@@ -16,8 +16,6 @@ searchBtn.addEventListener('click', () => {
 
 
 
-
-
 let img = document.getElementById('img')
 let title = document.getElementById('title')
 let rate = document.getElementById('rate')
@@ -27,17 +25,6 @@ let duration = document.getElementById('duration-num')
 let classification = document.getElementById('film-classification')
 let plot = document.getElementById('plot')
 
-
-// let data = {
-//     posterLink     : ['https://w0.peakpx.com/wallpaper/528/490/HD-wallpaper-kung-fu-panda.jpg'],
-//     title          : ['Kung Fu Panda 3'],
-//     rate           : ['7.1'],
-//     moreInfo       : {madeBy : ['Alessandro Carloni'], madeAt : ['2016'], duration : ['95']},
-//     classification : ['Animation', 'Action', 'Adventure'],
-//     plot           : ['Continuing his "legendary adventures of awesomeness", Po must face two hugely epic, but different threats: one supernatural and the other a little closer to home.']
-// }
-
-let movies = ['kung fu panda'] //else 
 function search() {
     clear()
     let movieName = input.value
@@ -52,7 +39,7 @@ function search() {
             if (data.Response == "True") {
                 img.src = data.Poster
                 title.innerHTML = data.Title
-                rate.innerHTML = `<img src="./photosToUse/star.png" alt="Rating star"> ${data.imdbRating}`
+                rate.innerHTML = `<img src="star.png" alt="Rating star"> ${data.imdbRating}`
                 madeAt.innerHTML = data.Year
                 duration.innerHTML = data.Runtime
                 let classificationItems = data.Genre.split(",")
