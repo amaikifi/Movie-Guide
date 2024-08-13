@@ -58,11 +58,11 @@ function search() {
 
 function clear() {
     img.src = ''
-        title.innerHTML = ''
-        // rate.innerHTML = '' // don't use it and if you use it don't forget to check if the star is still there
-        madeBy.innerHTML = ''
-        madeAt.innerHTML = ''
-        duration.innerHTML = '' 
-        classification.innerHTML = ``
-        plot.innerHTML = ''
+    title.innerHTML = ''
+    rate.innerHTML = '' // don't use it and if you use it don't forget to check if the star is still there
+    madeBy.innerHTML = ''
+    madeAt.innerHTML = ''
+    duration.innerHTML = '' 
+    classification.innerHTML = ``
+    plot.innerHTML = ''
 }

@@ -55,6 +55,7 @@ body {
     padding: 0px 10px;
     flex-grow: 1;
     height: 40px;
+    font-size: 17px;
 }
 
 .container .search-area #search-btn {
